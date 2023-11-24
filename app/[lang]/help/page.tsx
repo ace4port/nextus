@@ -45,7 +45,7 @@ export default async function HelpCenterPage({
           (collection) =>
             collection.translations &&
             collection.translations[0] && (
-              <div key={collection.id}>
+              <div key={collection.slug}>
                 <div className='hover:border-accent-focus card bg-base-200 no-underline transition duration-200'>
                   <figure>
                     {collection.cover && (
@@ -65,7 +65,10 @@ export default async function HelpCenterPage({
                     <p> {collection.translations[0].description}</p>
                     <div className='card-actions justify-end'>
                       <button className='btn-l btn btn-primary'>
-                        <Link href={`/help/${collection.slug}`}>
+                        <Link
+                          prefetch={false}
+                          href={`/help/${collection.slug}`}
+                        >
                           {t('help.view')}
                         </Link>
                       </button>
