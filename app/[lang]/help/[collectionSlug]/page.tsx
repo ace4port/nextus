@@ -98,7 +98,7 @@ export default async function CollectionPage({
                     <div key={article.id}>
                       <Link
                         prefetch={false}
-                        href={`/help/${collection.slug}/${article.slug}`}
+                        href={`/help/${collection?.slug}/${article.slug}`}
                         className='flex flex-col rounded-br-lg rounded-tl-lg p-3 transition duration-150 hover:bg-accent/30 '
                       >
                         <div className='flex items-center justify-between'>
